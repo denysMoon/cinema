@@ -1,11 +1,9 @@
 import './App.css';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
-const theme = createTheme({
-
-});
+import { theme } from './utils/muiTheme'
 
 function App() {
   return (
