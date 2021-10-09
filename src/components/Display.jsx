@@ -19,7 +19,9 @@ const Display = () =>{
 
     return(
         <Container sx={{mt: 2}}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2}
+            justifyContent="center"
+             >
                 {
                     show()
                 }

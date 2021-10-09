@@ -18,11 +18,13 @@ const CardItem = ({ item }) =>{
                 />
                 <CardMedia
                     component="img"
-                    // height="194"
                     image={MOVIE_POSTER_LINK + item.poster_path}
                     alt="Poster"
                 />
                 <CardContent>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                        {item.vote_average} ({item.vote_count} votes)
+                    </Typography>
                     <Typography variant="body2" color="text.secondary">
                         {item.overview}
                     </Typography>
