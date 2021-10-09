@@ -1,33 +1,28 @@
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import { useSelector } from 'react-redux';
-import CardItem from './CardItem'
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import { useSelector } from "react-redux";
+import CardItem from "./CardItem";
 
-const Display = () =>{
+const Display = () => {
+  const search = useSelector((store) => store.search.search);
 
-    const search = useSelector(store=>store.search.search)
+  console.log(search);
 
-    console.log(search)
-
-    const show = () =>{
-        if(search.results){
-            return search.results.map(item=><CardItem item={item} />)
-        } else {
-            return 'no'
-        }
+  const show = () => {
+    if (search.results) {
+      return search.results.map((item) => <CardItem item={item} />);
+    } else {
+      return "no";
     }
+  };
 
-    return(
-        <Container sx={{mt: 2}}>
-            <Grid container spacing={2}
-            justifyContent="center"
-             >
-                {
-                    show()
-                }
-            </Grid>
-        </Container>
-    )
-}
+  return (
+    <Container sx={{ mt: 2 }}>
+      <Grid container spacing={2} justifyContent="center">
+        {show()}
+      </Grid>
+    </Container>
+  );
+};
 
-export default Display
+export default Display;
