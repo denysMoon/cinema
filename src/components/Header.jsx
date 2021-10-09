@@ -7,7 +7,7 @@ const Header = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar>
+            <AppBar position="static">
                 <Toolbar>
                     <SearchForm />
                 </Toolbar>
