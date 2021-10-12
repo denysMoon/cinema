@@ -23,11 +23,11 @@ const SearchForm = () => {
     <form onSubmit={onSubmit}>
       <TextField
         type="form"
-        label="Type"
         value={inputValue}
         onChange={onChange}
         onSubmit={onSubmit}
         fullWidth={true}
+        sx={{ width: "300px" }}
       />
     </form>
   );

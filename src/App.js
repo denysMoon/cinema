@@ -3,20 +3,28 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import Header from './components/Header';
 
-import { ThemeProvider } from '@mui/material/styles';
+import {
+  ThemeProvider
+} from '@mui/material/styles';
 
-import { theme } from './utils/muiTheme'
+import {
+  theme
+} from './utils/muiTheme'
 import MainContent from './components/MainContent';
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Header />
-        
-        <MainContent />
-
-    </ThemeProvider>
+  return ( <
+    ThemeProvider theme = {
+      theme
+    } >
+    <
+    CssBaseline / >
+    <
+    Header / >
+    <
+    MainContent / >
+    <
+    /ThemeProvider>
   );
 }
 

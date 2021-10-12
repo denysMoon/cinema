@@ -2,6 +2,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 import CardItem from "./CardItem";
+import AlertPage from "./AlertPage";
 
 const Display = () => {
   const search = useSelector((store) => store.search.search);
@@ -12,7 +13,7 @@ const Display = () => {
     if (search.results) {
       return search.results.map((item) => <CardItem item={item} />);
     } else {
-      return "no";
+      return <AlertPage info="Search something" />;
     }
   };
 

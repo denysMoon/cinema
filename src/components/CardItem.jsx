@@ -4,6 +4,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 import { useState } from "react";
 import Box from "@mui/material/Box";
@@ -20,11 +21,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  height: "100%",
   bgcolor: "background.paper",
-  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  overflow: "scroll",
 };
 
 const CardItem = ({ item }) => {
@@ -49,22 +50,23 @@ const CardItem = ({ item }) => {
           width="500px"
         />
         <CardContent>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
+          <Typography sx={{ mb: 1.5 }} color="text.secondary" te>
+            <StarBorderIcon fontSize="inherit" />
             {item.vote_average} ({item.vote_count} votes)
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            <Box
-              component="div"
-              sx={{
-                textOverflow: "ellipsis",
-                my: 2,
-                overflow: "hidden",
-                height: 90,
-              }}
-            >
-              {item.overview ? item.overview : "No description"}
-            </Box>
-          </Typography>
+          <Box
+            component="div"
+            sx={{
+              textOverflow: "ellipsis",
+              my: 2,
+              overflow: "hidden",
+              height: 100,
+            }}
+          >
+            <Typography variant="body2" color="text.secondary">
+              {item.overview ? item.overview : "No description"}{" "}
+            </Typography>
+          </Box>
         </CardContent>
         <Button onClick={handleOpen}>More info</Button>
       </Card>

@@ -1,0 +1,4 @@
+/* Hide scroll */
+::-webkit-scrollbar {
+  display: none;
+}
